@@ -1,5 +1,7 @@
 import React from 'react';
+
 import BlogHeader from './components/header/index';
+import Hero from './components/hero/index';
 
 function App() {
   return (
@@ -9,6 +11,19 @@ function App() {
       <div className="page-scroll">
         <div id="page_container" className="page-container bg-move-effect" data-animation="transition-flip-in-right">
           <BlogHeader />
+
+          <div className="site-main">
+            <div id="main-content" className="single-page-content">
+              <div id="primary" className="content-area">    
+                <div id="content" className="page-content site-content single-post" role="main">
+                  <Hero />
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+
         </div>
       </div>
 
