@@ -2,6 +2,7 @@ import React from 'react';
 
 import BlogHeader from './components/header/index';
 import Hero from './components/hero/index';
+import Sections from './components/section/index';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
               <div id="primary" className="content-area">    
                 <div id="content" className="page-content site-content single-post" role="main">
                   <Hero />
+                  <Sections />
                 </div>
               </div>
             </div>
