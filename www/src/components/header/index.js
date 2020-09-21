@@ -21,20 +21,8 @@ const blogHeader = () => {
                   <a href="https://www.linkedin.com/in/davidcondemarin/" target="new">Resume</a>
                 </li>
                 
-                <li className="menu-item menu-item-has-children">
-                  <a href="blog.html">Blog</a>
-                  <ul className="sub-menu">
-                    <li className="menu-item">
-                      <a href="blog.html">Blog 2 Columns</a>
-                    </li>
-                    <li className="menu-item">
-                      <a href="blog-3-columns.html">Blog 3 Columns</a>
-                    </li>
-                  </ul>
-                </li>
-
                 <li className="menu-item">
-                  <a href="contact.html">Contact</a>
+                  <a href="https://medium.com/dcms-blog/" target="new">Blog</a>
                 </li>
               </ul>
             </div>
