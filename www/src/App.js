@@ -3,6 +3,7 @@ import React from 'react';
 import BlogHeader from './components/header/index';
 import Hero from './components/hero/index';
 import Sections from './components/section/index';
+import BlogPosts from './components/section/blog-posts';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
                 <div id="content" className="page-content site-content single-post" role="main">
                   <Hero />
                   <Sections />
+                  <BlogPosts />
                 </div>
               </div>
             </div>
