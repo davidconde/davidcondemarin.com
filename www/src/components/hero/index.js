@@ -22,7 +22,7 @@ const hero = () => {
                         
                     <div className="home-buttons">
                       <a href="https://www.linkedin.com/in/davidcondemarin/" target="_blank" className="btn btn-primary">LinkedIn CV</a>
-                      <a href="#" target="_self" className="btn btn-secondary">Contact</a>
+                      <a href="mailto:dcm@davidcondemarin.com" target="_self" className="btn btn-secondary">Contact</a>
                     </div>
                   </div>
                 </div>
