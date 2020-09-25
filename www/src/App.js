@@ -20,7 +20,6 @@ function App() {
                 <div id="content" className="page-content site-content single-post" role="main">
                   <Hero />
                   <Sections />
-                  <BlogPosts />
                 </div>
               </div>
             </div>
