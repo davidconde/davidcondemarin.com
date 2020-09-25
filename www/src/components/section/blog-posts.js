@@ -14,7 +14,7 @@ const renderBlogPost = (post) => {
       <div className="blog-card">
         <div className="media-block">
           <a href={post.link} target="_blank">
-            <img src="/img/blog_post.jpg" alt={post.title} title={post.title} />
+            <img src={post.image} alt={post.title} title={post.title} />
             <div className="mask"></div>
           </a>
         </div>
