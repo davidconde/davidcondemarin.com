@@ -1,13 +1,5 @@
 import React from 'react';
 
-const content = [
-  {
-    icon: "",
-    title: "",
-    description: ""
-  }
-];
-
 const sections = () => {
   return <React.Fragment>
           <div className="row">
