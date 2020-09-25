@@ -9,7 +9,7 @@ const renderBlogPosts = (posts) => {
 };
 
 const renderBlogPost = (post) => {
-  return <React.Fragment>
+  return <React.Fragment key={post.link}>
     <div className="item">
       <div className="blog-card">
         <div className="media-block">
@@ -19,7 +19,7 @@ const renderBlogPost = (post) => {
           </a>
         </div>
         <div className="post-info">
-          <div className="post-date">04 Dec 2019</div>
+          <div className="post-date"> {post.date} </div>
           <a href={post.link}>
             <h4 className="blog-item-title">{post.title}</h4>
           </a>
