@@ -1,5 +1,6 @@
 let Parser = require('rss-parser');
 const { DateTime } = require("luxon");
+const axios = require("axios");
 
 let parser = new Parser();
 
@@ -33,10 +34,15 @@ const mapStory = (post) => {
   };
 }
 
+
+
 const fetchLatestBlogPosts = async () => {
-  const rssFeed = "https://medium.com/feed/dcms-blog";
-  let feed = await parser.parseURL(rssFeed);
-  return feed.items.slice(0, fetchCount).map(mapStory);
+  const rssFeed = await axios.get("http://localhost:3000/blog-posts");
+
+  if (!rssFeed.data || !rssFeed.data.response)
+    return [];
+
+  return rssFeed.data.response;
 }
 
 export default fetchLatestBlogPosts;

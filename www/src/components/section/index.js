@@ -1,5 +1,7 @@
 import React from 'react';
 
+import BlogPosts from './blog-posts';
+
 const sections = () => {
   return <React.Fragment>
           <div className="row">
@@ -113,7 +115,9 @@ const sections = () => {
 
                 
               </div>
+              
             </div>
+            <BlogPosts />
           </div>
   </React.Fragment>;
 };

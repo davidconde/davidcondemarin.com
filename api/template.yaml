@@ -9,10 +9,11 @@ Globals:
     Timeout: 3
 
 Resources:
+ 
   GetPostsForBlog:
     Type: AWS::Serverless::Function 
     Properties:
-      CodeUri: src/posts/
+      CodeUri: src/posts/get-all/
       Handler: app.lambdaHandler
       Runtime: nodejs10.x
       Events:
