@@ -7,21 +7,67 @@ Description: >
 Globals:
   Function:
     Timeout: 3
+    Layers:
+      - !Ref BaseLayer
 
 Resources:
- 
+  GetPostContent:
+    Type: AWS::Serverless::Function 
+    Properties:
+      CodeUri: src/posts/get-post/
+      Handler: app.lambdaHandler
+      Runtime: nodejs16.x
+      Events:
+        ApiCall:
+          Type: Api 
+          Properties:
+            Path: /post
+            Method: get
   GetPostsForBlog:
     Type: AWS::Serverless::Function 
     Properties:
       CodeUri: src/posts/get-all/
       Handler: app.lambdaHandler
-      Runtime: nodejs10.x
+      Runtime: nodejs16.x
       Events:
-        HelloWorld:
+        ApiCall:
           Type: Api 
           Properties:
             Path: /blog-posts
             Method: get
+  ### ================
+  ### Layers
+  ### ================
+
+  BaseLayer:
+    Type: AWS::Serverless::LayerVersion
+    Properties:
+      LayerName: base-layer
+      Description: Dependencies
+      ContentUri: src/layers/base/
+      CompatibleRuntimes:
+        - nodejs12.x
+        - nodejs16.x
+      LicenseInfo: "MIT"
+      RetentionPolicy: Retain
+
+  DynamoTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      AttributeDefinitions:
+        - AttributeName: pk
+          AttributeType: S
+        - AttributeName: sk
+          AttributeType: S
+      KeySchema:
+        - AttributeName: pk
+          KeyType: HASH
+        - AttributeName: sk
+          KeyType: RANGE
+     
+      ProvisionedThroughput:
+        ReadCapacityUnits: 5
+        WriteCapacityUnits: 5
 
 Outputs:
   WebsiteApi:

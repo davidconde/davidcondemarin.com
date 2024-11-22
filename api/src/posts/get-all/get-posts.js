@@ -1,7 +1,7 @@
 let Parser = require('rss-parser');
 const { DateTime } = require("luxon");
 
-const fetchCount = 4;
+const fetchCount = 6;
 const genericImage = "/img/blog_post.jpg";
 
 const getPostImage = (postContent) => {
